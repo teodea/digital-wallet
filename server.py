@@ -426,11 +426,11 @@ def processPayment(id, str, type):
 
 if __name__ == '__main__':
     # create the first database (the following section is commented because it only needs to be executed once)
-    """ connection = create_server_connection("localhost", "root", "forzamilan") """
+    """ connection = create_server_connection("localhost", "root", "password") """
     """ create_database(connection, "CREATE DATABASE Databank")                  """
 
     # connect to the database
-    connection = create_db_connection("localhost", "root", "forzamilan", "Databank")
+    connection = create_db_connection("localhost", "root", "password", "Databank")
 
     # create the tables (the following section is commented because it only needs to be executed once)
     """ create_tables(connection) """
@@ -600,7 +600,6 @@ if __name__ == '__main__':
                 m1.addParam('message', "Transaction canceled successfully...\n")
 
         if type=='INTR':
-            print("ciaocomestaifanculo")
             m1.setType('GOOD')
             pending = intro(id)
             print(pending)
